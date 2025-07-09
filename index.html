@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuvask - Máscara LED Profissional</title>
+
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #866042;
+  background-color: #dbca95;
+}
+
+header.hero {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem; /* ↓ Menos espaço no topo e fundo */
+  background-color: #dbca95;
+}
+
+.hero img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 6.5rem;         /* Um pouco menor para harmonia */
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;      /* ↓ Remove espaço de cima */
+  color: white;">
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;      /* ↓ Menos espaço entre h1 e h2 */
+  color:white
+  background-color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #dbca95;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+  background-color: #866042;
+}
+
+.cta-btn {
+  background-color: #c70039;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.cta-btn:hover {
+  background-color: #a5002c;
+}
+
+.form-section2 {
+  max-width: 600px;      /* largura máxima da caixa */
+  margin: 2rem auto;     /* centralizar a secção horizontalmente */
+  padding: 2rem;         /* espaço interno para afastar o conteúdo da borda */
+  border: 2px solid #c70039;  /* borda vermelha para criar o quadrado */
+  border-radius: 12px;   /* cantos arredondados */
+  background-color: #fff; /* fundo branco */
+  box-sizing: border-box;
+  text-align: left;      /* alinhamento do texto à esquerda */
+  font-family: Arial, sans-serif;
+}
+
+.form-section2 h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-section2 label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.form-section2 input[type="text"],
+.form-section2 input[type="email"],
+.form-section2 input[type="number"],
+.form-section2 textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-section2 input:focus,
+.form-section2 textarea:focus {
+  border-color: #01b6d5;
+  outline: none;
+}
+
+.info-section2 {
+  padding: 2rem;
+}
+
+.info-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* Responsivo em telas pequenas */
+}
+
+.info-text {
+  flex: 1.2;
+  min-width: 300px;
+}
+
+.info-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.info-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 700px; /* Ajuste conforme necessário */
+  border-radius: 10px;
+}
+
+.product-info {
+  padding: 2rem;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Para responsividade em telas pequenas */
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Aumenta se quiser mais destaque */
+  border-radius: 10px;
+}
+
+.product-text {
+  flex: 1;
+  min-width: 300px;
+}
+    .comparison {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color:white;
+  font-size: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+.comparison h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #dbca95;
+  background-color:#866042;
+}
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison th,
+/* linhas da tabela de comparação */
+.comparison td {
+  border: 1px solid #391c1c;
+  padding: 1.5rem;
+  vertical-align: top;
+}
+/* titulo da tabela de comparação */
+.comparison th {
+  background-color: #866042;
+  font-weight: bold;
+  text-align: left;
+  color: #dbca95
+}
+
+/* Manter alinhamento à esquerda nos TDs com muito texto */
+.comparison td {
+  text-align: left;
+}
+
+/* Especificamente para as células com estilo inline, não sobrescrever cor nem peso */
+.comparison td[style*="font-weight: bold"] {
+  /* Nenhuma regra aqui, mantém o estilo inline */
+}
+
+.comparison td[style*="color: green"] {
+  /* Nenhuma regra aqui, mantém o estilo inline */
+}
+    
+    .Especificações {
+  font-size: 1rem;
+  color: #000;
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+}
+
+.Especificações h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #dbca95;
+  background-color: #866042;
+}
+
+.Especificações table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Especificações th,
+.Especificações td {
+  border: 1px solid #39291c;
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.Especificações th {
+  background-color: #866042;
+  font-weight: bold;
+  text-align: left;
+  color: #dbca95;
+}
+
+.faq-accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  border: 1px solid #39291c; /* cor neutra */
+  border-radius: 8px;
+  background: white;
+  font-size: 1rem;
+  color: #39291c;
+  text-align: left; /* garante alinhamento à esquerda */
+}
+
+.faq-accordion details[open] {
+  text-align: left; /* para quando expandir */
+}
+
+./* Bloco 1: imagem à esquerda, texto à direita */
+    .product-info {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin: 2rem auto;
+      max-width: 900px;
+      flex-wrap: wrap;
+      text-align: left;
+      padding: 0 1rem;
+    }
+
+    .product-info img {
+      max-width: 350px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-text {
+      flex: 1 1 450px;
+      min-width: 280px;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .product-text h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .product-text p {
+      margin-bottom: 1rem;
+      text-align: left;
+      color: #000000;
+    }
+
+    /* Bloco 2: texto à esquerda, imagem à direita */
+    .info-section {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin: 2rem auto 4rem;
+      max-width: 900px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .info-text {
+      flex: 1 1 450px;
+      min-width: 280px;
+      font-size: 1rem;
+      color: #000000;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .info-text h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .info-text p {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .image-placeholder {
+      flex: 1 1 350px;
+      min-width: 280px;
+      height: 300px;
+      background-color: #e6e6e6;
+      border: 2px dashed #bbb;
+      border-radius: 15px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #777;
+      font-size: 1.2rem;
+      font-style: italic;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f2f2f2;
+    }
+
+  </style>
+</head>
+<body>
+<body>
+
+</section>
+
+  <header class="hero">
+    <h1>Nuvask</h1>
+    <h2>Máscara LED Profissional</h2>
+    <p>A alternativa inteligente às marcas concorrentes</p>
+  </header>
+
+  <section class="intro-text" style="text-align:center; padding: 2rem 1rem; background-color:#ffffff; color:black; max-width: 900px; margin: auto; font-size: 1.2rem; line-height: 1.4;">
+  <p style="font-size: 1.8rem;; color: #866042;"><strong>Transforma a tua pele e recupera a juventude em casa.</strong></p>
+  <p><i>Ter uma pele perfeita não é magia, é tecnologia!</i></p>
+  <p>Reduz as rugas, trata e previne o acne, trata as manchas, ilumina a pele, suaviza a sua textura e promove a produção de colagénio.</p>
+
+  <!-- Bloco 2: texto à esquerda, imagem à direita -->
+<section class="info-section">
+  <div class="info-container">
+    <div class="info-text">
+      <h2 style="color: #866042;">Porque que devo escolher a máscara LED em vez de tratamentos invasivos?</h2>
+      <p><strong>→Porque não doi e não é necessario tempo de recuperação:</strong> Ao contrário de procedimentos como peelings profundos ou laser, a terapia com luz LED é indolor e pode ser feita no conforto da tua casa, sem interrupção da tua rotina.</p>
+      <p><strong>→Segurança comprovada:</strong> A nossa máscara é fabricada em silicone de grau alimentar, um material hipoalergénico e seguro para utilização diária, garantindo assim conforto e higiene.</p>
+      <p><strong>→Resultados naturais e duradouros:</strong> A luz estimula os processos naturais de regeneração da pele, promovendo uma melhoria gradual na textura, firmeza e luminosidade.</p>
+      <p><strong>→Praticidade:</strong> Usar a máscara é simples e rápido, sendo ideal para quem procura cuidar da pele sem complicações.</p>
+      <p>Se desejas uma pele mais jovem, firme e radiante, sem comprometer a segurança e o conforto, a máscara facial LED Nuvask é a escolha perfeita. Experimente esta revolução nos cuidados de pele e sente a diferença!</p>
+    </div>
+    <div class="info-image">
+      <img src="https://wakelifebeauty.com/wp-content/uploads/2025/06/g17led-mask.webp" alt="Máscara LED" />
+    </div>
+  </div>
+</section>
+
+  <!-- Bloco 1: imagem à esquerda, texto à direita -->
+<section class="product-info">
+  <div class="product-container">
+    <div class="product-image">
+      <img src="https://wakelifebeauty.com/wp-content/uploads/2025/04/g17-led-mask-6.webp" alt="Imagem lateral máscara LED" />
+    </div>
+    <div class="product-text">
+      <h2 style="color: #866042;">O que precisas de saber?</h2>
+      <p>→Esta máscara representa a mais recente revolução na tecnologia das máscaras LED para o combate ao envelhecimento e renovação da pele.</p>
+      <p>→A sua capacidade aprimorada de produção de colagénio reduz significativamente as linhas finas, as rugas e a vermelhidão, conferindo à pele um aspeto mais jovem.</p>
+      <p>→A cobertura de luz melhorada proporciona o nosso famoso brilho instantâneo, deixando a pele mais saudável, luminosa e suave.</p>
+      <p>→O novo e exclusivo design com 236 lâmpadas LED emite três comprimentos de onda clinicamente comprovados: vermelho (633 nm), infravermelho próximo (850 nm) e infravermelho profundo (1072 nm).</p>
+      <p>→As nossas máscaras são fabricadas em silicone de grau alimentar. Isto significa que não são tóxicas, são hipoalergénicas, resistentes a bactérias e seguras para a pele.</p>
+      <p>→O nosso material é seguro, suave e não irritante, sendo ideal para uso direto no rosto. É duradouro, fácil de limpar e mantém a higiene durante a utilização.</p>
+      <p>→Com as nossas máscaras consegue garantir que o material não causará alergias ou irritações, proporcionando-lhe conforto durante a sua utilização.</p>
+    </div>
+  </div>
+</section>
+
+<section class="comparison">
+    <h2>Comparação com outras marcas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Nuvask</th>
+          <th>Marca mais conhecida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nº de LEDs</td>
+          <td>240</td>
+          <td>236</td>
+        </tr>
+        <tr>
+          <td>Comprimentos de onda</td>
+          <td style="text-align:left; padding-left:1rem;">
+            <strong>3 Comprimentos de onda do LED:</strong><br />
+            - Vermelho (633nm) — Estimula produção de colágeno e circulação<br />
+            - Infravermelhos Próximos (850nm) — Penetração profunda para regeneração<br />
+            - Infravermelho Próximo Profundo (1072nm) — Atua nas camadas mais profundas da pele
+          </td>
+          <td style="text-align:left; padding-left:1rem;">
+            3 Comprimentos de onda do LED:<br />
+            - Vermelho (633nm)<br />
+            - Infravermelhos Próximos (830nm)<br />
+            - Infravermelho Próximo Profundo (1072nm)
+          </td>
+        </tr>
+        <tr>
+          <td>Certificações</td>
+          <td>FDA, CE, ISO</td>
+          <td>CE</td>
+        </tr>
+        <tr>
+          <td>Preço</td>
+          <td style="font-weight: bold; color: green;">349,99€</td>
+          <td style="color: #999;">449,99€</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+				<div class="elementor-element elementor-element-b8a753d elementor-widget elementor-widget-image" data-id="b8a753d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" width="800" height="852" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_01.webp" class="attachment-full size-full wp-image-7188" alt="G17-DETAIL-TAKELIFE_01" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_01.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_01-282x300.webp 282w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_01-768x818.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_01-600x639.webp 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-4e10f06 elementor-widget elementor-widget-image" data-id="4e10f06" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="800" height="800" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02.webp" class="attachment-full size-full wp-image-7189" alt="G17-DETAIL-TAKELIFE_02" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02-300x300.webp 300w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02-150x150.webp 150w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02-768x768.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02-600x600.webp 600w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_02-100x100.webp 100w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-718d7e4 elementor-widget elementor-widget-image" data-id="718d7e4" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="800" height="1200" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_03.webp" class="attachment-full size-full wp-image-7190" alt="G17-DETAIL-TAKELIFE_03" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_03.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_03-200x300.webp 200w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_03-683x1024.webp 683w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_03-768x1152.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_03-600x900.webp 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-4b94c23 elementor-widget elementor-widget-image" data-id="4b94c23" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="800" height="1000" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_04.webp" class="attachment-full size-full wp-image-7191" alt="G17-DETAIL-TAKELIFE_04" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_04.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_04-240x300.webp 240w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_04-768x960.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_04-600x750.webp 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-b90db8a elementor-widget elementor-widget-image" data-id="b90db8a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="800" height="970" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_05.webp" class="attachment-full size-full wp-image-7192" alt="G17-DETAIL-TAKELIFE_05" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_05.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_05-247x300.webp 247w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_05-768x931.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_05-600x728.webp 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-a705dde elementor-widget elementor-widget-image" data-id="a705dde" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="800" height="900" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_06.webp" class="attachment-full size-full wp-image-7193" alt="G17-DETAIL-TAKELIDE_06" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_06.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_06-267x300.webp 267w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_06-768x864.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_06-600x675.webp 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-b5da834 elementor-widget elementor-widget-image" data-id="b5da834" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="800" height="900" src="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_07.webp" class="attachment-full size-full wp-image-7194" alt="G17-DETAIL-TAKELIDE_07" srcset="https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_07.webp 800w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_07-267x300.webp 267w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_07-768x864.webp 768w, https://wakelifebeauty.com/wp-content/uploads/2025/03/G17-detail-wakelife_07-600x675.webp 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+<section class="Especificações">
+  <h2><strong>Especificações</strong></h2>
+  <table>
+    <thead>
+      <tr>
+        <th><strong>Especificação</strong></th>
+        <th><strong>Detalhes</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Modelo</strong></td><td>N2</td></tr>
+      <tr><td><strong>Poder</strong></td><td>5C</td></tr>
+      <tr><td><strong>Número de chips LED</strong></td><td>279</td></tr>
+      <tr><td><strong>Tipo de LED</strong></td><td>5054</td></tr>
+      <tr><td><strong>Proporção de LED</strong></td><td>415:633:850 = 1:1:1 → 81 PCs<br>415:633:1072 = 1:1:1 → 12 PCs</td></tr>
+      <tr><td><strong>Dimensões</strong></td><td>219 × 210 × 131 mm</td></tr>
+      <tr><td><strong>Peso do controlador</strong></td><td>100g</td></tr>
+      <tr><td><strong>Peso da máscara de silicone</strong></td><td>246g</td></tr>
+      <tr><td><strong>Tensão nominal</strong></td><td>5V/2a (4000Mah)</td></tr>
+      <tr><td><strong>Características</strong></td><td>2 modos + 3 níveis de brilho + 10Pulso Hz</td></tr>
+      <tr><td><strong>Tempo de carregamento</strong></td><td>2 horas (10 minutos por sessão, 10-12 sessões por carga)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="faq-accordion">
+  <button class="faq-toggle" aria-expanded="false">
+    Perguntas Frequentes <span class="arrow">▼</span>
+  </button>
+  <div class="faq-content" hidden>
+    <p>
+      <strong>Será igual às outras marcas conhecidas?</strong><br />
+      A Nuvask utiliza a mesma tecnologia LED de alta qualidade presente nos dispositivos de gama alta, mas a um preço muito mais acessível.
+    </p>
+    <p>
+      <strong>É segura para uso doméstico?</strong><br />
+      Sim, a Nuvask está certificada pela CE, FDA e ISO para utilização segura em casa.
+    </p>
+    <p>
+      <strong>O que está incluído?</strong><br />
+      A máscara, o controlo remoto, o cabo de carregamento e o manual de instruções.
+    </p>
+  </div>
+</section>
+
+<style>
+.faq-accordion {
+  max-width: 770px;
+  padding: 1rem 1rem;
+  margin: 2rem auto;
+  border: 1px solid #39291c;
+  border-radius: 8px;
+  background: white
+  font-size: 1rem;
+  color: #000;
+}
+
+.faq-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-toggle:focus {
+  outline: 2px solid #39291c;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Rotaciona a seta quando aberto */
+.faq-toggle[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 2rem 2rem 2rem;
+  line-height: 1.5;
+}
+</style>
+
+<script>
+const toggleBtn = document.querySelector('.faq-toggle');
+const content = document.querySelector('.faq-content');
+
+toggleBtn.addEventListener('click', () => {
+  const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+  toggleBtn.setAttribute('aria-expanded', !expanded);
+  content.hidden = expanded;
+});
+</script>
+
+<section class="form-section2">
+  <h2>Reserva a tua máscara</h2>
+  <form action="#" method="POST">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="quantidade">Quantidade desejada</label>
+    <input type="number" id="quantidade" name="quantidade" min="1" required />
+
+    <label for="mensagem">Mensagem (opcional)</label>
+    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+    <button type="submit" class="cta-btn">Enviar pedido de reserva</button>
+  </form>
+</section>
+  <footer
