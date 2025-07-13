@@ -182,18 +182,49 @@ header.hero {
   flex: 1;
   min-width: 300px;
 }
-    .comparison {
+ .comparison {
   max-width: 800px;
   margin: 1.5rem auto;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid white;
   border-radius: 8px;
-  background-color:white;
+  background-color: white;
   font-size: 1rem;
   color: #000;
   text-align: center;
+  overflow-x: auto; /* scroll horizontal */
+}
+/* Deixa a tabela responsiva dentro do container com scroll */
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Para garantir que as células mantenham tamanho e linhas apareçam */
 }
 
+/* Ajustes para as células, mantendo bordas e cor */
+.comparison th,
+.comparison td {
+  border: 1px solid #391c1c;
+  padding: 1.5rem;
+  vertical-align: top;
+  text-align: left;
+  word-wrap: break-word; /* para textos longos quebrarem linha */
+}
+
+/* Título */
+.comparison th {
+  background-color: #866042;
+  font-weight: bold;
+  color: #dbca95;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .comparison {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
 .comparison h2 {
   text-align: left;
   margin-bottom: 1.5rem;
@@ -235,7 +266,7 @@ header.hero {
   /* Nenhuma regra aqui, mantém o estilo inline */
 }
     
-    .Especificações {
+  .Especificações {
   font-size: 1rem;
   color: #000;
   max-width: 800px;
@@ -245,6 +276,43 @@ header.hero {
   border-radius: 8px;
   background-color: white;
   text-align: center;
+  overflow-x: auto; /* scroll horizontal */
+}
+
+.Especificações h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #dbca95;
+  background-color: #866042;
+}
+
+.Especificações table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* para manter linhas e colunas alinhadas */
+}
+
+.Especificações th,
+.Especificações td {
+  border: 1px solid #39291c;
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word; /* para textos longos quebrarem linha */
+}
+
+.Especificações th {
+  background-color: #866042;
+  font-weight: bold;
+  color: #dbca95;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .Especificações {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 .Especificações h2 {
@@ -668,4 +736,11 @@ toggleBtn.addEventListener('click', () => {
 </div>
   </form>
 </section>
+<footer class="site-footer">
+  <p>Segue-nos no Instagram: 
+    <a href="https://www.instagram.com/nuvask.ue" target="_blank">@nuvask.ue</a>
+  </p>
+  <p>Ou contacta-nos por email: 
+    <a href="mailto:nuvasktechnology@gmail.com">nuvasktechnology@gmail.com</a>
+  </p>
   <footer
