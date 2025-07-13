@@ -91,7 +91,15 @@ header.hero {
   font-weight: bold;
   color: #222;
 }
-
+.form-section2 input[type="tel"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
 .form-section2 input[type="text"],
 .form-section2 input[type="email"],
 .form-section2 input[type="number"],
@@ -108,7 +116,7 @@ header.hero {
 
 .form-section2 input:focus,
 .form-section2 textarea:focus {
-  border-color: #01b6d5;
+  border-color:#ccc;
   outline: none;
 }
 
@@ -637,15 +645,23 @@ toggleBtn.addEventListener('click', () => {
   <form action="https://formsubmit.co/nuvasktechnology@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://rococo-douhua-992098.netlify.app/obrigado.html">
     <label for="nome">Nome</label>
     <input type="text" id="nome" name="nome" required />
 
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required />
 
-    <label for="quantidade">Quantidade desejada</label>
-    <input type="number" id="quantidade" name="quantidade" min="1" required />
-
+    <label for="contacto">Número de contacto</label>
+<input
+  type="tel"
+  id="contacto"
+  name="contacto"
+  pattern="[0-9]{9}"
+  maxlength="9"
+  placeholder="Ex: 912345678"
+  required
+/>    
     <label for="mensagem">Mensagem (opcional)</label>
     <textarea id="mensagem" name="mensagem" rows="4"></textarea>
 
