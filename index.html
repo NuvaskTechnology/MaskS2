@@ -386,7 +386,9 @@ header.hero {
       padding: 2rem;
       background-color: #f2f2f2;
     }
-
+.botao-centro {
+  text-align: center;
+}
   </style>
 </head>
 <body>
@@ -479,7 +481,7 @@ header.hero {
         </tr>
         <tr>
           <td>Preço</td>
-          <td style="font-weight: bold; color: green;">349,99€</td>
+          <td style="font-weight: bold; color: green;">349,99€<small>*com IVA incluído</small>
           <td style="color: #999;">449,99€</td>
         </tr>
       </tbody>
@@ -635,7 +637,9 @@ toggleBtn.addEventListener('click', () => {
 </script>
 
 <section class="form-section2">
-  <h2>Reserva a tua máscara</h2>
+  <h2>⚡ Oferta limitada até 31 de julho!</h2>
+  <p>Pré-reserva a tua máscara LED até <strong>31 de julho</strong> e recebe <strong>20% de desconto</strong> no valor final.</p>
+  <p>Válido apenas durante este mês. Não percas esta oportunidade de transformar a tua pele!</p>
   <form action="https://formsubmit.co/nuvasktechnology@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
@@ -659,7 +663,9 @@ toggleBtn.addEventListener('click', () => {
     <label for="mensagem">Mensagem (opcional)</label>
     <textarea id="mensagem" name="mensagem" rows="4"></textarea>
 
-    <button type="submit" class="cta-btn">Enviar pedido de reserva</button>
+    <div class="botao-centro">
+  <button type="submit" class="cta-btn">Pré-reservar agora com 20% de desconto</button>
+</div>
   </form>
 </section>
   <footer
